@@ -1,11 +1,23 @@
 # Typst 模板
 
-`./template.typ` 为模板文件。为使用模板请在新建的文件最上方引用:
-
 > 参考 [simple-paper](https://github.com/jinhao-huang/SimplePaper.git)
+
+`./template.typ` 为模板文件, 如果要使用模板，请在文档最上方下面这段代码:
 
 ```typst
 #import "template.typ": *
+
+#show: project.with(
+  title: "TITLE",
+  authors: (
+    (
+      name: "Wonderland",
+      email: "example@com"
+    ),
+  ),
+)
+
+
 ```
 
 ## 字体
