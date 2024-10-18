@@ -2,6 +2,8 @@
 
 `./template.typ` 为模板文件。为使用模板请在新建的文件最上方引用:
 
+> 参考 [simple-paper](https://github.com/jinhao-huang/SimplePaper.git)
+
 ```typst
 #import "template.typ": *
 ```
