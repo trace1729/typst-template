@@ -27,6 +27,7 @@
 ## 教程推荐
 
 - [官方教程](https://typst.app/docs/tutorial/)
+- [所有的数学符号](https://typst.app/docs/reference/symbols/sym/)
 - [中文教程](https://typst-doc-cn.github.io/tutorial/)
 - [typst-example](https://github.com/sitandr/typst-examples-book)
 - [视频教程](https://www.bilibili.com/video/BV1AJ4m1j7Sa)
