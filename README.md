@@ -2,7 +2,7 @@
 
 > 参考 [simple-paper](https://github.com/jinhao-huang/SimplePaper.git)
 
-`./template.typ` 为模板文件, 如果要使用模板，请在文档最上方下面这段代码:
+`./template.typ` 为模板文件, 如果要使用模板，请在文档最上方加入:
 
 ```typst
 #import "template.typ": *
