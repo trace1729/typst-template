@@ -22,8 +22,11 @@
 
 ## 字体
 
-正文部分，英文字体设置的是 「New Computer Modern, 可以使用 `typst fonts| grep <>` 来查看字体是否可用。
-其余设置请看 `template.typ`
+- 正文部分，英文字体设置的是 「New Computer Modern
+- 代码字体设置的是「JetBrainsMono NF」
+- 可以使用 `typst fonts| grep <>` 来查看字体是否可用, 如果不可用，可以在 `templated.typ` 中替换为系统可用的字体。
+
+更详细的配置请移步 `template.typ`
 
 ## 显示效果
 
