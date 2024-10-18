@@ -56,9 +56,46 @@ Noticed, we use `/.vim.` to ignore `.vim` dir only in project root dir.
 "./pipeline1.png",  "流水线", 70%
 )
 
-= 网格、栈与列表
+= 栈、列表和网格
 
-== Grid
+
+== stack
+
+#stack(
+	dir: ltr,
+	rect(width: 25%, "PPN1"),
+	rect(width: 25%, "PPN2"),
+	rect(width: 25%, "PPN3"),
+	rect(width: 25%, "OFF"),
+)
+
+== table
+
+#let n = 6
+#let yield_cells(n) = {
+  for i in range(0, n + 1) {
+    for j in range(0, n + 1) {
+      // this is an array, for loops merge them together
+      // into one large array of cells
+      (
+        table.cell(
+          fill: if i == 0 { blue} // top right corner
+          else if j == 0 { blue }
+          else {white},
+          " "),
+      )
+    }
+  }
+}
+
+#align(center)[#table(
+  columns: (0.6cm,) * (n + 1), 
+  rows: (0.6cm,) * (n + 1), 
+  ..yield_cells(n),
+)]
+
+== grid
+
 
 #set rect(width: 100%)
 #align(center)[
@@ -128,41 +165,6 @@ Noticed, we use `/.vim.` to ignore `.vim` dir only in project root dir.
    )
    *REM* instruction layout
 ]
-
-== 栈
-
-#stack(
-	dir: ltr,
-	rect(width: 25%, "PPN1"),
-	rect(width: 25%, "PPN2"),
-	rect(width: 25%, "PPN3"),
-	rect(width: 25%, "OFF"),
-)
-
-== 表格
-
-#let n = 6
-#let yield_cells(n) = {
-  for i in range(0, n + 1) {
-    for j in range(0, n + 1) {
-      // this is an array, for loops merge them together
-      // into one large array of cells
-      (
-        table.cell(
-          fill: if i == 0 { blue} // top right corner
-          else if j == 0 { blue }
-          else {white},
-          " "),
-      )
-    }
-  }
-}
-
-#align(center)[#table(
-  columns: (0.6cm,) * (n + 1), 
-  rows: (0.6cm,) * (n + 1), 
-  ..yield_cells(n),
-)]
 
 = 数学
 
