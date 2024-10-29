@@ -141,17 +141,20 @@
 
 	show raw.where(block: true): code => {
 		show raw.line: line => {
-      text(fill: gray)[#line.number]
-      h(1em)
-      if (line.text.ends-with("highlight")) {
-        highlight(line.body)
-      } else {
-        line.body
-      }
+      box(
+        stack(
+        dir: ltr,
+        box(width: 15pt)[#text(fill: gray)[#line.number]],
+        if (line.text.ends-with("highlight")) {
+          highlight(line.body)
+        } else {
+          line.body
+        }
+      ))
+      
 		}
 		code
-	}
-	
+	}	
 // cancel indent
 // set par(first-line-indent: 2em, justify: true)
 
@@ -227,7 +230,7 @@
 		#pic(figure2, caption2, ratio2) 
 	] 
 
-//#import "simplepaper.typ": *
+//#import "template.typ": *
 //
 //#show: project.with(
   //title: "TITLE",

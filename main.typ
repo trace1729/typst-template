@@ -189,3 +189,5 @@ Thus $f^(i)(bot) subset.eq.sq f^i (x) = x$
 $ f^(#[fix]) = f^k(bot) subset.eq.sq x $
 
 Then we prove $bot$ is the least fixed-point.
+
+what is the basic usage of the things I need to do
